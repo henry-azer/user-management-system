@@ -2,24 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>user-management-system</artifactId>
+        <groupId>org.henry</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.6</version>
-        <relativePath/>
-    </parent>
-
-    <groupId>org.henry</groupId>
-    <artifactId>user-management-system</artifactId>
+    <artifactId>user-management-system-data</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>user-management-system-data</module>
-        <module>user-management-system-backend</module>
-    </modules>
 
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
