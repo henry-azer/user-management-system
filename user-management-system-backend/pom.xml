@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>org.henry</groupId>
-            <artifactId>user-management-system-data</artifactId>
+            <artifactId>user-management-system-services</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 

@@ -19,6 +19,7 @@
     <modules>
         <module>user-management-system-data</module>
         <module>user-management-system-backend</module>
+        <module>user-management-system-services</module>
     </modules>
 
     <properties>
