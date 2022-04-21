@@ -1,11 +1,9 @@
 package org.henry.repository;
 
-import org.henry.dao.UserDAO;
+import org.henry.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface UserRepository extends JpaRepository<UserDAO, Integer> {
-
-    UserDAO findById(int id);
-
-    UserDAO deleteById(int id);
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
 }
