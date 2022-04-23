@@ -43,7 +43,7 @@ Outlook - [@Henry Azer](mailto:henryazer@outlook.com)
 
 LinkedIn - [@Henry Azer](https://www.linkedin.com/in/henry-azer-1220121a7/)
 
-## ✍️ Authors
+## ✍️ Author
 * Henry Azer
 
 [contributors-shield]: https://img.shields.io/github/contributors/Henry-Azer/user-management-system.svg?style=for-the-badge
