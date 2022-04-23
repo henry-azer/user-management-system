@@ -1,15 +1,16 @@
 ## CircleCi CI/CD pipelines 
 [![CircleCI](https://circleci.com/gh/Henry-Azer/user-management-system/tree/master.svg?style=svg)](https://circleci.com/gh/Henry-Azer/user-management-system/tree/master)
 
+## 👨‍💻 User Management System
+Spring boot restful user management system, Multi-tier architecture, implement base classes, use (Lombok - Mapstruct - Liquibase) technologies, use Postgresql and apply CircleCi pipelines.
+
+## Repository stats
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
-## 👨‍💻 User Management System
-Spring boot restful user management system, Multi-tier architecture, implement base classes, use (Lombok - Mapstruct - Liquibase) technologies, use Postgresql and apply CircleCi pipelines.
 
 ## 🛠 Skills & Packages
 * Spring boot
