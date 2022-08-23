@@ -1,6 +1,10 @@
 package org.henry.controller;
 
 import org.henry.dto.UserDto;
+import org.henry.dto.UserPaginationFiltrationDto;
+import org.henry.dto.request.FilterPaginationRequest;
+import org.henry.dto.request.PaginationRequest;
+import org.henry.dto.response.PaginationResponse;
 import org.henry.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,6 +26,14 @@ public class UserRestController {
         this.userService = userService;
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<UserDto> getUser(@PathVariable Long id) {
+        Optional<UserDto> user = Optional.ofNullable(userService.findById(id));
+
+        return user.map(dto -> new ResponseEntity<>(dto, HttpStatus.OK))
+                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
     @GetMapping("/all")
     public ResponseEntity<List<UserDto>> getAllUsers() {
         List<UserDto> users = userService.findAll();
@@ -31,12 +43,14 @@ public class UserRestController {
                 new ResponseEntity<>(users, HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<UserDto> getUser(@PathVariable Long id) {
-        Optional<UserDto> user = Optional.ofNullable(userService.findById(id));
+    @PostMapping("/find-all-paginated")
+    public ResponseEntity<PaginationResponse<UserDto>> findAllUsersPaginated(@RequestBody PaginationRequest paginationRequest) {
+        return new ResponseEntity<>(userService.findAllUsersPaginatedRequest(paginationRequest), HttpStatus.OK);
+    }
 
-        return user.map(dto -> new ResponseEntity<>(dto, HttpStatus.OK))
-                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    @PostMapping("/find-all-paginated-filtered")
+    public ResponseEntity<PaginationResponse<UserDto>> findAllUsersPaginatedAndFiltered(@RequestBody FilterPaginationRequest<UserPaginationFiltrationDto> userPaginationFiltrationDto) {
+        return new ResponseEntity<>(userService.findAllUsersPaginatedFiltered(userPaginationFiltrationDto), HttpStatus.OK);
     }
 
     @PostMapping
