@@ -5,7 +5,7 @@ import org.henry.dto.BaseDto;
 import org.henry.entity.BaseEntity;
 import org.mapstruct.*;
 
-@MapperConfig(unmappedTargetPolicy = ReportingPolicy.ERROR,
+@MapperConfig(unmappedTargetPolicy = ReportingPolicy.IGNORE,
         mappingInheritanceStrategy = MappingInheritanceStrategy.AUTO_INHERIT_FROM_CONFIG)
 public interface GenericMapperConfiguration {
 
